@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Doc's Laundry</title>
+<title>Martello Chiropractic | Baton Rouge</title>
 
 <style>
 * {
@@ -14,12 +14,13 @@
 
 body {
     font-family: 'Segoe UI', sans-serif;
-    background: #f5f7fb;
+    background: #f4f4f6;
+    color: #222;
 }
 
 /* TOP BAR */
 .top-bar {
-    background: #2d3e9f;
+    background: #3E36A8;
     color: white;
     text-align: center;
     padding: 10px;
@@ -28,7 +29,7 @@ body {
 
 /* HEADER */
 header {
-    background: linear-gradient(135deg, #2d3e9f, #1f2c73);
+    background: linear-gradient(135deg, #5A4FCF, #3E36A8);
     padding: 20px;
 }
 
@@ -40,17 +41,17 @@ header {
 }
 
 .logo {
-    max-width: 250px;
+    max-width: 220px;
+    border-radius: 8px;
 }
 
-/* SERVICES LEFT OF LOGO */
+/* SERVICES LEFT */
 .header-services {
     color: white;
     font-weight: bold;
-    font-size: 16px;
+    font-size: 15px;
     text-align: right;
 }
-
 
 .header-services p {
     margin: 5px 0;
@@ -58,7 +59,7 @@ header {
 
 /* NAV */
 nav {
-    background: #1f2c73;
+    background: #3E36A8;
     padding: 12px;
     text-align: center;
     position: sticky;
@@ -69,14 +70,19 @@ nav a {
     color: white;
     margin: 0 18px;
     text-decoration: none;
+    font-weight: 500;
+}
+
+nav a:hover {
+    color: #cfcaff;
 }
 
 /* BANNER */
 .banner {
     overflow: hidden;
     white-space: nowrap;
-    background: #1f2c73;
-    color: #ffd700;
+    background: #3E36A8;
+    color: #ffffff;
     padding: 12px 0;
     font-weight: bold;
 }
@@ -92,10 +98,6 @@ nav a {
     100% { transform: translateX(-100%); }
 }
 
-.hanger {
-    margin: 0 15px;
-}
-
 /* SECTIONS */
 section {
     padding: 60px 20px;
@@ -106,17 +108,17 @@ section {
 h2 {
     text-align: center;
     margin-bottom: 25px;
-    color: #2d3e9f;
+    color: #3E36A8;
 }
 
 /* CARD */
 .card {
     position: relative;
     padding: 25px;
-    border-radius: 12px;
+    border-radius: 14px;
     overflow: hidden;
     margin: 20px 0;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    box-shadow: 0 6px 25px rgba(0,0,0,0.1);
 }
 
 .card-light {
@@ -133,7 +135,7 @@ h2 {
     content: "";
     position: absolute;
     inset: 0;
-    background: rgba(0,0,0,0.55);
+    background: rgba(62, 54, 168, 0.65);
 }
 
 .card-content {
@@ -150,35 +152,25 @@ ul li {
     border-bottom: 1px solid rgba(255,255,255,0.3);
 }
 
-/* LOCATIONS */
-.locations {
-    display: grid;
-    gap: 20px;
-}
-
-.location-link {
-    text-decoration: none;
-    color: inherit;
-}
-
-.location-link:hover .card {
-    transform: scale(1.02);
-}
-
 /* BUTTON */
 .call-btn {
     display: inline-block;
-    background: #2d3e9f;
+    background: #5A4FCF;
     color: white;
     padding: 12px 20px;
     margin-top: 15px;
     border-radius: 8px;
     text-decoration: none;
+    transition: 0.3s;
 }
 
-/* SCROLL ANIMATION */
+.call-btn:hover {
+    background: #3E36A8;
+}
+
+/* ANIMATION */
 .fade {
-    opacity: 0;
+    opacity: ;
     transform: translateY(30px);
     transition: all 0.8s ease;
 }
@@ -197,7 +189,7 @@ iframe {
 
 /* FOOTER */
 footer {
-    background: #1f2c73;
+    background: #3E36A8;
     color: white;
     text-align: center;
     padding: 25px;
@@ -208,314 +200,97 @@ footer {
 <body>
 
 <div class="top-bar">
-📍 Baton Rouge, LA | 📞 (225) 383-6798 | 🕒 7:00 AM – 10:00 PM (Services 8AM–3PM)
+Baton Rouge, LA |  (225) 754-7777 |  Mon–Fri: 8AM–6PM
 </div>
 
 <header>
     <div class="header-container">
         
         <div class="header-services">
-            <p>WASH</p>
-            <p>DRY</p>
-            <p>FOLD</p>
-            <p>PRESS</p>
-            <p>STEAM</p>
-            <p>ALTERATIONS</p>
+            <p>BACK PAIN RELIEF</p>
+            <p>NECK PAIN</p>
+            <p>SPINAL ADJUSTMENTS</p>
+            <p>SPORTS INJURIES</p>
+            <p>AUTO ACCIDENT CARE</p>
+            <p>WELLNESS CARE</p>
         </div>
 
-        <img src="IMG_0883.jpeg" class="logo">
+        <img src="martellologo.jpg" class="logo">
 
     </div>
 </header>
 
 <nav>
     <a href="#about">About</a>
-    <a href="services.html">Services</a>
-    <a href="#locations">Locations</a>
-    <a href="#payments">Payments</a>
+    <a href="#services">Services</a>
     <a href="#contact">Contact</a>
 </nav>
 
 <div class="banner">
     <div class="banner-track">
-        WASH <span class="hanger">👕</span>
-        DRY <span class="hanger">👕</span>
-        FOLD <span class="hanger">👕</span>
-        PRESS <span class="hanger">👕</span>
-        STEAM <span class="hanger">👕</span>
-        ALTERATIONS
+        RELIEVE PAIN • RESTORE MOBILITY • LIVE BETTER • RELIEVE PAIN • RESTORE MOBILITY • LIVE BETTER
     </div>
 </div>
 
 <section id="about" class="fade">
-    <h2>About Us</h2>
-    <div class="card card-light">
-        <p>
-            Doc’s Laundry is a trusted laundromat in Baton Rouge providing clean, modern, and efficient
-            laundry services. We offer garment services including alterations, steaming, and pressing
-            fabrics ranging from large tablecloths and bedding to small linens.
-        </p>
-    </div>
-</section>
-<section id="services" class="fade">
-    <h2 style="font-size:42px;">
-        Our Premium, Reasonably Priced Services
-    </h2>
+    <h2>About Dr. Martello</h2>
 
-    <div style="
-        display:grid;
-        grid-template-columns:repeat(auto-fit,minmax(450px,1fr));
-        gap:25px;
-        margin-top:35px;
-    ">
-
-        <!-- WASH & FOLD -->
-
-        <div class="card card-light" style="
-            border:3px solid #1f2c73;
-            border-radius:18px;
-        ">
-            <h3 style="
-                color:#1f2c73;
-                font-size:32px;
-                margin-bottom:15px;
-            ">
-                👕 Premium Wash & Fold
-            </h3>
-
-            <ul style="
-                list-style:none;
-                color:#333;
-                font-size:18px;
-                line-height:1.8;
-            ">
-                <li>• Everyday Clothing, Activewear, & Casual Attire</li>
-                <li>• Professional Separation of Colors & Whites</li>
-                <li>• Top-Tier Detergents & Fabric Softeners</li>
-                <li>• Neatly Folded & Ready to Wear</li>
-            </ul>
-        </div>
-
-        <!-- DRY CLEANING -->
-
-        <div class="card card-light" style="
-            border:3px solid #1f2c73;
-            border-radius:18px;
-        ">
-            <h3 style="
-                color:#1f2c73;
-                font-size:32px;
-                margin-bottom:15px;
-            ">
-                👔 Eco-Friendly Dry Cleaning
-            </h3>
-
-            <ul style="
-                list-style:none;
-                color:#333;
-                font-size:18px;
-                line-height:1.8;
-            ">
-                <li>• Suits, Dresses, & Formal Wear</li>
-                <li>• Delicate Fabrics (Silk, Wool, Cashmere)</li>
-                <li>• Environmentally Conscious Solvents</li>
-                <li>• Expert Stain Removal</li>
-                <li>• Crisp Pressing</li>
-            </ul>
-        </div>
-
-    </div>
-
-    <!-- BEDDING -->
-
-    <div class="card card-light" style="
-        margin-top:30px;
-        border:3px solid #1f2c73;
-        border-radius:18px;
-    ">
-
-        <h3 style="
-            color:#1f2c73;
-            font-size:34px;
-            margin-bottom:20px;
-        ">
-            🛏️ Bedding & Household Linens
-        </h3>
-
-        <div style="
-            display:grid;
-            grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-            gap:20px;
-        ">
-
-            <ul style="
-                list-style:none;
-                color:#333;
-                font-size:18px;
-                line-height:1.8;
-            ">
-                <li>• Comforters, Duvets, & Quilts</li>
-                <li>• Sheets, Pillowcases, & Blankets</li>
-                <li>• Towels & Bath Mats</li>
-            </ul>
-
-            <ul style="
-                list-style:none;
-                color:#333;
-                font-size:18px;
-                line-height:1.8;
-            ">
-                <li>• Specialized Large-Capacity Machines</li>
-                <li>• Professionally Cleaned</li>
-                <li>• Fluffed & Sanitized</li>
-            </ul>
-
-        </div>
-    </div>
-
-    <!-- COMMERCIAL -->
-
-    <div class="card card-light" style="
-        margin-top:30px;
-        border:3px solid #1f2c73;
-        border-radius:18px;
-    ">
-
-        <h3 style="
-            color:#1f2c73;
-            font-size:34px;
-            margin-bottom:20px;
-        ">
-            💼 Commercial & Business Laundry
-        </h3>
-
-        <div style="
-            display:grid;
-            grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-            gap:20px;
-        ">
-
-            <ul style="
-                list-style:none;
-                color:#333;
-                font-size:18px;
-                line-height:1.8;
-            ">
-                <li>• Uniforms & Linens for Restaurants</li>
-                <li>• Spa & Salon Towels</li>
-                <li>• Medical Clinic Scrubs</li>
-            </ul>
-
-            <ul style="
-                list-style:none;
-                color:#333;
-                font-size:18px;
-                line-height:1.8;
-            ">
-                <li>• Corporate Attire Programs</li>
-                <li>• Bulk Pricing Available</li>
-                <li>• Scheduled Pickups</li>
-            </ul>
-
-        </div>
-    </div>
-
-    <!-- EXTRA SERVICES -->
-
-    <div class="card card-bg"
-         style="
-         background-image:url('laundry.jpeg');
-         margin-top:30px;
-         border-radius:18px;
-         min-height:250px;
-         display:flex;
-         align-items:center;
-         justify-content:center;
-         ">
-
-        <div class="card-content" style="
-            text-align:center;
-            max-width:800px;
-        ">
-            <h3 style="
-                font-size:42px;
-                margin-bottom:15px;
-            ">
-                WASH • DRY • FOLD
-            </h3>
-
-            <h3 style="
-                font-size:42px;
-                margin-bottom:15px;
-            ">
-                PRESS • STEAM • ALTERATIONS
-            </h3>
-
-            <p style="
-                font-size:24px;
-                margin-top:20px;
-            ">
-                Uncompromising Quality. Affordable Pricing. Guaranteed.
+    <div class="card card-bg" style="background-image:url('IMG_4818.jpeg')">
+        <div class="card-content">
+            <p>
+                Dr. Martello has been proudly serving the Baton Rouge community as a dedicated chiropractor 
+                for many years, helping patients find long-term relief from pain and discomfort. With extensive 
+                training in spinal health and musculoskeletal care, he focuses on treating the root cause of pain.
+                <br><br>
+                His patient-first approach ensures every individual receives <strong> affordable personalized care designed to restore 
+                mobility, reduce pain, and improve overall quality of life.
+                <br><br>
+                At Martello Chiropractic, the mission is simple: help you feel better, move better, and live better.
             </p>
         </div>
     </div>
 </section>
-<section id="payments" class="fade">
-    <h2>Payment Options</h2>
-    <div class="card card-light">
-        <p style="font-weight:bold;">
-            We accept Cash, Tap-to-Pay, Credit, Debit, Check and Pay at Pickup.
-        </p>
-    </div>
-</section>
+<section><a href="https://youtu.be/samn_d7RuDY?si=9lIsk-8sz9c6l0Ux">
+    Watch Video
+</a></section>
 
-<section id="locations" class="fade">
-    <h2>Our Locations</h2>
-    <div class="locations">
+<section id="services" class="fade">
+    <h2>Our Services</h2>
 
-        <a href="https://www.google.com/maps?q=2485+Government+St+Baton+Rouge" target="_blank" class="location-link">
-            <div class="card card-light">
-                <h3>Government Street</h3>
-                <p>2485 Government St</p>
-            </div>
-        </a>
-
-        <a href="https://www.google.com/maps?q=2922+Nicholson+Dr+Baton+Rouge" target="_blank" class="location-link">
-            <div class="card card-light">
-                <h3>Nicholson Drive</h3>
-                <p>2922 Nicholson Dr</p>
-            </div>
-        </a>
-
-        <a href="https://www.google.com/maps?q=5023+Plank+Rd+Baton+Rouge" target="_blank" class="location-link">
-            <div class="card card-light">
-                <h3>Plank Road</h3>
-                <p>5023 Plank Rd</p>
-            </div>
-        </a>
-
+    <div class="card card-bg" style="background-image:url('IMG_ai.jpeg')">
+        <div class="card-content">
+            <ul>
+                <li>Chiropractic Adjustments<br><strong> - A gentle procdeure to realign the vertebrae and other joints of the body to allow efficient movement.</strong></li>
+                <li>Back & Neck Pain Treatment<br><strong> - Back and neck pain do not always come from injuries. Normal activites of daily living, poor posture, repetative motion disorders and over exertion can cause spinal joints to subluxate or "lock up" which can effectively be treated with chiropractic procedures.</strong></li>
+                <li>Auto Accident Injury Care<br><strong> - Impacts in auto accidents can easily cause damage to muscles ligaments, tendons and joint capsules which all cause pain, disfunction, and discomfort. Chiropratic treatment in these cases can restore joint fucntion and healing of damaged tissues.</strong></li>
+                <li>Sports Injury Rehabilitation<br><strong>- Athletes resort to chiropractic care in order to maintain health and joint mobility to allow optimal  athletic performance.</strong></li>
+                <li>Posture & Alignment Correction<br><strong></strong></li>
+                <li>Preventative Wellness Care</li>
+            </ul>
+        </div>
     </div>
 </section>
 
 <section id="contact" class="fade">
     <h2>Contact Us</h2>
-    <div class="card card-bg" style="background-image:url('cards.jpeg')">
-        <div class="card-content">
-            <p><strong>Phone:</strong> (225) 383-6798</p>
-            <p><strong>Email:</strong> docsinc@bellsouth.net</p>
 
-            <a href="tel:12253836798" class="call-btn">📞 Call Now</a>
+    <div class="card card-bg" style="background-image:url('IMG_ai.jpeg')">
+        <div class="card-content">
+            <p><strong>Phone:</strong> (225) 754-7777</p>
+            <p><strong>Location:</strong> 942 O'neal Lane, Baton Rouge, LA</p>
+
+            <a href="tel:12257672225" class="call-btn">📞 Call Now</a>
         </div>
     </div>
 </section>
 
 <section class="fade">
     <h2>Find Us</h2>
-    <iframe src="https://www.google.com/maps?q=2485+Government+St,+Baton+Rouge,+LA&output=embed"></iframe>
+    <iframe src="https://www.google.com/maps?q=oneal+lane+baton+rouge&output=embed"></iframe>
 </section>
 
 <footer>
-    <p>© 2026 Doc's Laundry</p>
+    <p>© 2026 Martello Chiropractic | Baton Rouge, LA</p>
 </footer>
 
 <script>
