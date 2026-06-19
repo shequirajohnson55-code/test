@@ -15,6 +15,7 @@
 body {
     font-family: 'Segoe UI', sans-serif;
     background: #f5f7fb;
+    color: #1f1f3c;
 }
 
 /* TOP BAR */
@@ -101,6 +102,7 @@ section {
     padding: 60px 20px;
     max-width: 1100px;
     margin: auto;
+    width: 100%;
 }
 
 h2 {
@@ -202,13 +204,126 @@ footer {
     text-align: center;
     padding: 25px;
 }
+
+/* FIX FOR PHONE NUMBER COLOR ON MOBILE */
+.top-bar a {
+    color: white !important;
+    text-decoration: none;
+}
+
+/* MOBILE RESPONSIVENESS FIX */
+body {
+    width: 100%;
+    overflow-x: hidden;
+}
+
+html {
+    width: 100%;
+    overflow-x: hidden;
+}
+
+/* HERO SECTION STYLES */
+.hero-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 0.9fr;
+    align-items: center;
+    gap: 2rem;
+}
+
+.hero-copy h2 {
+    font-size: clamp(2.75rem, 5vw, 3.8rem);
+    color: #1f2c73;
+    margin-bottom: 1.2rem;
+    line-height: 1.03;
+}
+
+.hero-copy p {
+    color: #5e678c;
+    font-size: 1.05rem;
+    max-width: 680px;
+    line-height: 1.6;
+}
+
+.hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 1.7rem;
+}
+
+.btn-primary,
+.btn-secondary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 999px;
+    padding: 1rem 1.6rem;
+    text-decoration: none;
+    font-weight: 700;
+    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn-primary {
+    background: #2d3e9f;
+    color: white;
+    box-shadow: 0 18px 34px rgba(45, 62, 159, 0.18);
+}
+
+.btn-primary:hover {
+    transform: translateY(-1px);
+}
+
+.btn-secondary {
+    background: white;
+    color: #1f2c73;
+    box-shadow: 0 12px 28px rgba(45, 62, 159, 0.12);
+}
+
+.btn-secondary:hover {
+    transform: translateY(-1px);
+}
+
+.hero-visual {
+    position: relative;
+    min-height: 320px;
+    border-radius: 24px;
+    overflow: hidden;
+    background-image: url('laundry.jpeg');
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0 24px 60px rgba(24, 54, 118, 0.18);
+}
+
+.hero-visual::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(25, 43, 103, 0.22), rgba(15, 30, 74, 0.72));
+}
+
+.hero-visual p {
+    position: absolute;
+    left: 1.25rem;
+    right: 1.25rem;
+    bottom: 1.25rem;
+    color: white;
+    z-index: 1;
+    font-size: 1rem;
+    line-height: 1.8;
+}
+
+@media (max-width: 900px) {
+    .hero-grid {
+        grid-template-columns: 1fr;
+    }
+}
 </style>
 </head>
 
 <body>
 
 <div class="top-bar">
-📍 Baton Rouge, LA | 📞 (225) 383-6798 | 🕒 7:00 AM – 10:00 PM (Services 8AM–3PM)
+📍 Baton Rouge, LA | 📞 (225) 383-6798 | 🕒 7:00 AM – 10:00 PM (Premium Services 8AM–3PM)
 </div>
 
 <header>
@@ -220,7 +335,7 @@ footer {
             <p>FOLD</p>
             <p>PRESS</p>
             <p>STEAM</p>
-            <p>ALTERATIONS</p>
+            
         </div>
 
         <img src="IMG_0883.jpeg" class="logo">
@@ -229,10 +344,10 @@ footer {
 </header>
 
 <nav>
-    <a href="#about">About</a>
-    <a href="services.html">Services</a>
+    
+    <a href="services.html">Our Premium Services</a>
+    <a href="#about">About Us</a>
     <a href="#locations">Locations</a>
-    <a href="#payments">Payments</a>
     <a href="#contact">Contact</a>
 </nav>
 
@@ -243,23 +358,39 @@ footer {
         FOLD <span class="hanger">👕</span>
         PRESS <span class="hanger">👕</span>
         STEAM <span class="hanger">👕</span>
-        ALTERATIONS
+        
     </div>
 </div>
+
+<section class="fade" style="padding: 60px 20px; max-width: 1100px; margin: auto; width: 100%;">
+    <div class="hero-grid">
+        <div class="hero-copy">
+            <h2>Elevate your laundry experience in Baton Rouge.</h2>
+            <p>Doc's Laundry combines traditioprofessional wash, dry, fold, steaming, and more services with linen care for homes, hospitality, and local businesses.</p>
+            <div class="hero-actions">
+                <a class="btn-primary" href="tel:12253836798">📞 Call Now</a>
+                <a class="btn-secondary" href="#services">See Services</a>
+            </div>
+        </div>
+        <div class="hero-visual">
+            <p>Drop off, Wash, Dry, Fold Fast pickup, Premium services. The process is simple you drop off your clothes, the staff weighs them and washes, dries, and neatly folds or hangs them for you to pick up later.  </p>
+        </div>
+    </div>
+</section>
 
 <section id="about" class="fade">
     <h2>About Us</h2>
     <div class="card card-light">
         <p>
-            Doc’s Laundry is a trusted laundromat in Baton Rouge providing clean, modern, and efficient
-            laundry services. We offer garment services including alterations, steaming, and pressing
-            fabrics ranging from large tablecloths and bedding to small linens.
+            Doc’s Laundry is a trusted laundromat in Baton Rouge providing Laundry and linen services.
+            We offer wash dry and fold, steam, and press services for personal to commercial needs. Visit us at Doc's on government street for our premium services (8 am- 3 pm daily)
+	
         </p>
     </div>
 </section>
 <section id="services" class="fade">
     <h2 style="font-size:42px;">
-        Our Premium, Reasonably Priced Services
+        Our Premium Reasonably Priced Services
     </h2>
 
     <div style="
@@ -289,14 +420,23 @@ footer {
                 font-size:18px;
                 line-height:1.8;
             ">
-                <li>• Everyday Clothing, Activewear, & Casual Attire</li>
-                <li>• Professional Separation of Colors & Whites</li>
-                <li>• Top-Tier Detergents & Fabric Softeners</li>
-                <li>• Neatly Folded & Ready to Wear</li>
-            </ul>
+	<p>
+Premium Wash & Fold services are available daily at Doc's from 8:00 AM to 3:00 PM ( We accept Cash, Checks, Cards and tap-to-Pay for all Premium Services.) services include:
+
+
+<li>•Drop-Off </li>
+<li>•Wash • Dry • Fold</li>
+<li>•Pick-Up & Delivery</li>
+
+<li>•Laundry, Towels, Drapes & Linens</li>
+                
+               
+                <li>• Professional Detergents & Fabric Softeners</li>
+                <li>• Folded Packaged & Ready to Wear</li>
+           </p></ul>
         </div>
 
-        <!-- DRY CLEANING -->
+        <!-- Self-Service -->
 
         <div class="card card-light" style="
             border:3px solid #1f2c73;
@@ -307,26 +447,26 @@ footer {
                 font-size:32px;
                 margin-bottom:15px;
             ">
-                👔 Eco-Friendly Dry Cleaning
-            </h3>
+                👔 Self-Service Wash and Dry
+             </h3>
 
             <ul style="
                 list-style:none;
                 color:#333;
                 font-size:18px;
                 line-height:1.8;
-            ">
-                <li>• Suits, Dresses, & Formal Wear</li>
-                <li>• Delicate Fabrics (Silk, Wool, Cashmere)</li>
-                <li>• Environmentally Conscious Solvents</li>
-                <li>• Expert Stain Removal</li>
-                <li>• Crisp Pressing</li>
+            "><p> At Doc's we commit to serving our community. Our public Self-Service Washeteria is available daily at Doc's from 7:00 AM to 10:00 PM at all 3 locations.
+                <li>• Cash Card and tap to Pay Options</li>
+                <li>• Speed Queen Washers and Dryers Machine </li>
+                <li>• Detergents & Fabric Softener Machine</li>
+                <li>• Wifi</li>
+                <li>• Free Bags during Premium Services hours.</li>
             </ul>
         </div>
 
     </div>
 
-    <!-- BEDDING -->
+    <!--Press Steam -->
 
     <div class="card card-light" style="
         margin-top:30px;
@@ -339,9 +479,9 @@ footer {
             font-size:34px;
             margin-bottom:20px;
         ">
-            🛏️ Bedding & Household Linens
+            🛏️ Press and Steam 
         </h3>
-
+	<p>Optimize your time and Select our Press and Steam Service. At Doc's we prioritize quality, our Flatwork Iron press and Steaming machinery produce a luxurious finishng to all Garments serviced at Doc's. Press and Steam service hours are from 8:00 AM to 3:00 PM. ( We accept Cash, Checks, Cards and tap-to-Pay for all Premium Services.)
         <div style="
             display:grid;
             grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
@@ -354,26 +494,28 @@ footer {
                 font-size:18px;
                 line-height:1.8;
             ">
-                <li>• Comforters, Duvets, & Quilts</li>
+                <li>• Specialized Large-Capacity Machines</li> 
+	        <li>•Stain Removal</li>
+                <li>• High Quality Finishing</li>
+                <li>• Fluffed & Santitized</li>            </ul>
+
+            <ul style="
+                list-style:none;
+                color:#333;
+                font-size:18px;
+                line-height:1.8;
+            ">
+                <li>•Comforters, Duvets, & Quilts</li>
                 <li>• Sheets, Pillowcases, & Blankets</li>
-                <li>• Towels & Bath Mats</li>
-            </ul>
+                <li>• Towels, Drapes, Curtains</li>
 
-            <ul style="
-                list-style:none;
-                color:#333;
-                font-size:18px;
-                line-height:1.8;
-            ">
-                <li>• Specialized Large-Capacity Machines</li>
-                <li>• Professionally Cleaned</li>
-                <li>• Fluffed & Sanitized</li>
+		<li>•Uniforms,Casual and Formal Wear</li>
             </ul>
 
         </div>
     </div>
 
-    <!-- COMMERCIAL -->
+    <!-- Alterations -->
 
     <div class="card card-light" style="
         margin-top:30px;
@@ -386,14 +528,15 @@ footer {
             font-size:34px;
             margin-bottom:20px;
         ">
-            💼 Commercial & Business Laundry
-        </h3>
-
-        <div style="
+            💼 Alterations
+        </h3>        <div style="
             display:grid;
             grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
             gap:20px;
         ">
+		 <p>Your simple Tailoring needs met at Doc's where we deliver quality. Alteration services for all garments can be accessed durin Premium Service hours 8 :00 AM to 3:00PM everyday at Doc's (We Accept card, cash, check and tap-tp-pay for all premium services)</p>
+
+
 
             <ul style="
                 list-style:none;
@@ -401,9 +544,9 @@ footer {
                 font-size:18px;
                 line-height:1.8;
             ">
-                <li>• Uniforms & Linens for Restaurants</li>
-                <li>• Spa & Salon Towels</li>
-                <li>• Medical Clinic Scrubs</li>
+                <li>• Hemming </li>
+                <li>• Patching and fabric repair</li>
+                <li>• Button and Zipper Repair</li>
             </ul>
 
             <ul style="
@@ -412,8 +555,8 @@ footer {
                 font-size:18px;
                 line-height:1.8;
             ">
-                <li>• Corporate Attire Programs</li>
-                <li>• Bulk Pricing Available</li>
+                <li>• Clothes, Curtains, Drapes</li>
+                <li>• Bedding</li>
                 <li>• Scheduled Pickups</li>
             </ul>
 
@@ -458,16 +601,8 @@ footer {
                 Uncompromising Quality. Affordable Pricing. Guaranteed.
             </p>
         </div>
-    </div>
 </section>
-<section id="payments" class="fade">
-    <h2>Payment Options</h2>
-    <div class="card card-light">
-        <p style="font-weight:bold;">
-            We accept Cash, Tap-to-Pay, Credit, Debit, Check and Pay at Pickup.
-        </p>
-    </div>
-</section>
+
 
 <section id="locations" class="fade">
     <h2>Our Locations</h2>
