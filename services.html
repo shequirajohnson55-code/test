@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Doc's Laundry Services</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Segoe UI',sans-serif;
+    background:#f5f7fb;
+    color:#333;
+}
+
+header{
+    background:linear-gradient(135deg,#2d3e9f,#1f2c73);
+    padding:20px;
+    text-align:center;
+}
+
+.logo{
+    max-width:220px;
+}
+
+nav{
+    background:#1f2c73;
+    padding:12px;
+    text-align:center;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin:0 18px;
+}
+
+.hero{
+    text-align:center;
+    padding:40px 20px;
+}
+
+.hero h1{
+    color:#2d3e9f;
+    font-size:2.5rem;
+}
+
+.services-grid{
+    max-width:1200px;
+    margin:auto;
+    padding:20px;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(350px,1fr));
+    gap:25px;
+}
+
+.service-card{
+    background:white;
+    border-radius:12px;
+    padding:25px;
+    box-shadow:0 5px 20px rgba(0,0,0,.1);
+    border:2px solid #d9dce8;
+}
+
+.service-card h2{
+    color:#1f2c73;
+    margin-bottom:15px;
+}
+
+.service-card ul{
+    list-style:none;
+}
+
+.service-card li{
+    padding:6px 0;
+}
+
+.full-width{
+    max-width:1200px;
+    margin:25px auto;
+    background:white;
+    border-radius:12px;
+    padding:25px;
+    box-shadow:0 5px 20px rgba(0,0,0,.1);
+    border:2px solid #d9dce8;
+}
+
+.two-column{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:30px;
+}
+
+footer{
+    margin-top:40px;
+    background:#1f2c73;
+    color:white;
+    text-align:center;
+    padding:25px;
+}
+
+@media(max-width:768px){
+    .two-column{
+        grid-template-columns:1fr;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <img src="IMG_0883.jpeg" alt="Doc's Laundry Logo" class="logo">
+</header>
+
+<nav>
+    <a href="index.html">Home</a>
+    <a href="services.html">Services</a>
+    <a href="index.html#locations">Locations</a>
+    <a href="index.html#payments">Payments</a>
+    <a href="index.html#contact">Contact</a>
+</nav>
+
+<section class="hero">
+    <h1>Our Premium, Reasonably Priced Services</h1>
+</section>
+
+<div class="services-grid">
+
+    <div class="service-card">
+        <h2>👕 Premium Wash & Fold</h2>
+        <ul>
+            <li>Everyday Clothing, Activewear, & Casual Attire</li>
+            <li>Professional Separation of Colors & Whites</li>
+            <li>Top-Tier Detergents & Fabric Softeners</li>
+            <li>Neatly Folded & Ready to Wear</li>
+        </ul>
+    </div>
+
+    <div class="service-card">
+        <h2>👔 Eco-Friendly Dry Cleaning</h2>
+        <ul>
+            <li>Suits, Dresses, & Formal Wear</li>
+            <li>Delicate Fabrics (Silk, Wool, Cashmere)</li>
+            <li>Environmentally Conscious Solvents</li>
+            <li>Expert Stain Removal</li>
+            <li>Crisp Pressing</li>
+        </ul>
+    </div>
+
+</div>
+
+<div class="full-width">
+    <h2 style="color:#1f2c73; margin-bottom:15px;">
+        🛏️ Bedding & Household Linens
+    </h2>
+
+    <div class="two-column">
+        <ul>
+            <li>Comforters, Duvets, & Quilts</li>
+            <li>Sheets, Pillowcases, & Blankets</li>
+            <li>Towels & Bath Mats</li>
+        </ul>
+
+        <ul>
+            <li>Specialized Large-Capacity Machines</li>
+            <li>Fluffed & Sanitized</li>
+        </ul>
+    </div>
+</div>
+
+<div class="full-width">
+    <h2 style="color:#1f2c73; margin-bottom:15px;">
+        💼 Commercial & Business Laundry
+    </h2>
+
+    <div class="two-column">
+        <ul>
+            <li>Uniforms & Linens for Restaurants</li>
+            <li>Spa & Salon Towels</li>
+            <li>Medical Clinic Scrubs</li>
+        </ul>
+
+        <ul>
+            <li>Corporate Attire Programs</li>
+            <li>Bulk Pricing & Scheduled Pickups</li>
+        </ul>
+    </div>
+</div>
+
+<footer>
+    <p>Uncompromising Quality. Affordable Pricing. Guaranteed.</p>
+    <br>
+    <p>© 2026 Doc's Laundry</p>
+</footer>
+
+</body>
+</html>
