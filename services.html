@@ -40,35 +40,25 @@ nav a{
     margin:0 18px;
 }
 
-.hero{
-    text-align:center;
-    padding:40px 20px;
-}
-
-.hero h1{
-    color:#2d3e9f;
-    font-size:2.5rem;
-}
-
-section{
+.section{
     padding:60px 20px;
     max-width:1100px;
     margin:auto;
     width:100%;
 }
 
-h2{
+.section-title{
     text-align:center;
     margin-bottom:25px;
     color:#2d3e9f;
     font-size:42px;
 }
 
-.services-style{
+.grid-2{
     display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(450px,1fr));
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
     gap:25px;
-    margin-top:35px;
+    margin-top:25px;
 }
 
 .service-card{
@@ -90,17 +80,7 @@ h2{
     color:#333;
     font-size:18px;
     line-height:1.8;
-}
-
-.service-card li{
-    padding:6px 0;
-}
-
-.service-card p{
-    margin-bottom: 15px;
-    color:#333;
-    font-size:18px;
-    line-height:1.8;
+    padding-left:0;
 }
 
 .full-width-card{
@@ -110,37 +90,6 @@ h2{
     padding:25px;
     box-shadow:0 5px 20px rgba(0,0,0,.1);
     border:3px solid #1f2c73;
-}
-
-.full-width-card h3{
-    color:#1f2c73;
-    font-size:34px;
-    margin-bottom:20px;
-}
-
-.full-width-card p{
-    color:#333;
-    font-size:18px;
-    line-height:1.8;
-    margin-bottom:15px;
-}
-
-.two-column{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-    gap:20px;
-    margin-top:20px;
-}
-
-.two-column ul{
-    list-style:none;
-    color:#333;
-    font-size:18px;
-    line-height:1.8;
-}
-
-.two-column li{
-    padding:6px 0;
 }
 
 .extra-services{
@@ -190,7 +139,7 @@ footer{
 }
 
 @media(max-width:768px){
-    .two-column{
+    .grid-2{
         grid-template-columns:1fr;
     }
 }
@@ -205,95 +154,125 @@ footer{
 
 <nav>
     <a href="index.html">Home</a>
-    <a href="services.html">Services</a>
+    <a href="services.html"> Our Services</a>
     <a href="index.html#locations">Locations</a>
-    <a href="index.html#payments">Payments</a>
+   
     <a href="index.html#contact">Contact</a>
 </nav>
 
-<section>
-    <h2 style="font-size:42px;">
-        Our Premium Reasonably Priced Services
-    </h2>
+<section class="section">
+    <h2 class="section-title">When It  Comes to Laundry</h2>
 
-    <div class="services-style">
+    <div class="grid-2">
 
-        <!-- WASH & FOLD -->
-        <div class="service-card">
-            <h3>👕 Premium Wash & Fold</h3>
+         <!-- WASH & FOLD -->
 
-            <ul>
-                <p>
-                    Premium Wash & Fold services are available daily at Doc's from 8:00 AM to 3:00 PM ( We accept Cash, Checks, Cards and tap-to-Pay for all Premium Services.) services include:
-                </p>
-                <li>•Drop-Off</li>
-                <li>•Wash • Dry • Fold</li>
-                <li>•Pick-Up & Delivery</li>
-                <li>•Laundry, Towels, Drapes & Linens</li>
-                <li>• Professional Detergents & Fabric Softeners</li>
-                <li>• Folded Packaged & Ready to Wear</li>
-            </ul>
+        <div class="card card-light" style="
+            border:3px solid #1f2c73;
+            border-radius:18px;
+        ">
+            <h3 style="
+                color:#1f2c73;
+                font-size:32px;
+                margin-bottom:15px;
+            ">
+               <center>👕Let us do it for you!  <br>
+<center> 8 A.M. - 3 P.M. <br> Everyday 
+            </h3>
+            <ul style="
+                list-style:none;
+                color:#333;
+                font-size:18px;
+                line-height:1.8;
+            "> 	
+<li>•Drop-Off Same Day Service </li>
+<li>•Wash • Dry • Fold</li>
+<li>•Large Bundle Washes Welcomed<br> No load too big or too small</li>           
+               
+                <li>•Press/Iron/Steam Garments with No upcharge for startch</li><li>•Check, Card, Cash, Tap-to-Pay (for all premium services)</li>
+           </ul>
         </div>
 
         <!-- Self-Service -->
-        <div class="service-card">
-            <h3>👔 Self-Service Wash and Dry</h3>
 
-            <ul>
-                <p>At Doc's we commit to serving our community. Our public Self-Service Washeteria is available daily at Doc's from 7:00 AM to 10:00 PM at all 3 locations.</p>
-                <li>• Cash Card and tap to Pay Options</li>
-                <li>• Speed Queen Washers and Dryers Machine</li>
-                <li>• Detergents & Fabric Softener Machine</li>
-                <li>• Wifi</li>
+        <div class="card card-light" style="
+            border:3px solid #1f2c73;
+            border-radius:18px;
+        ">
+            <h3 style="
+                color:#1f2c73;
+                font-size:32px;
+                margin-bottom:15px;
+            ">
+                 <center> 👔Do It Yourself!
+             </h3>
+
+            <ul style="
+                list-style:none;
+                color:#333;
+                font-size:18px;
+                line-height:1.8;
+            ">                <li>• Large & Small Commercial Washers</li>
+                <li>•A/C, T.V, Wifi </li>
+                <li>• Soap Machine supplying:<br> Detergents, Fabric Softeners, Bleach & Dryer Sheets</li>
+                <li>• Cash, Card & Tap (for self service)</li>
                 <li>• Free Bags during Premium Services hours.</li>
+
+
             </ul>
         </div>
 
     </div>
 
     <!--Press Steam -->
-    <div class="full-width-card">
-        <h3>🛏️ Press and Steam</h3>
-        <p>Optimize your time and Select our Press and Steam Service. At Doc's we prioritize quality, our Flatwork Iron press and Steaming machinery produce a luxurious finishng to all Garments serviced.</p>
-        
-        <div class="two-column">
-            <ul>
-                <li>• Specialized Large-Capacity Machines</li>
+
+    <div class="card card-light" style="
+        margin-top:30px;
+        border:3px solid #1f2c73;
+        border-radius:18px;
+    ">
+
+        <h3 style="
+            color:#1f2c73;
+            font-size:34px;
+            margin-bottom:20px;
+        ">
+            <center>🛏️ We Offer Services Others Don't!
+        </h3>
+	    <div style="
+            display:grid;
+            grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+            gap:20px;
+        ">
+
+            <ul style="
+                list-style:none;
+                color:#333;
+                font-size:18px;
+                line-height:1.8;
+            ">
+<li>•Pressing/Ironing Sheets, Pillowcases, Duvets and napkins</li>
+                <li>•Pressing/Ironing Tablecloths and linenes</li>
+                <li>•Steamig Curtains/Drapes</li>
+
+		<li>•Pickup + Delivery on Large Repeat Orders</li>
                 <li>•Stain Removal</li>
-                <li>• High Quality Finishing</li>
-                <li>• Fluffed & Santitized</li>
-            </ul>
+                <li>•Comforters, Blankets, Quilts, Rugs, Mats, Simple Alterations, & Shoes</li>
+                </ul>
 
-            <ul>
-                <li>•Comforters, Duvets, & Quilts</li>
-                <li>• Sheets, Pillowcases, & Blankets</li>
-                <li>• Towels, Drapes, Curtains</li>
-                <li>•Uniforms,Casual and Formal Wear</li>
-            </ul>
+            <ul style="
+                list-style:none;
+                color:#333;
+                font-size:18px;
+                line-height:1.8;
+            ">
+                            </ul>
+
         </div>
     </div>
 
-    <!-- Alterations -->
-    <div class="full-width-card">
-        <h3>💼 Alterations</h3>
-        <p>Your simple Tailoring needs met at Doc's where we deliver quality. Alteration services for all garments can be accessed durin Premium Service hours 8 :00 AM to 3:00PM everyday at Doc's (We accept Cash, Checks, Cards and tap-to-Pay for all Premium Services.)</p>
-        
-        <div class="two-column">
-            <ul>
-                <li>• Hemming</li>
-                <li>• Patching and fabric repair</li>
-                <li>• Button and Zipper Repair</li>
-            </ul>
 
-            <ul>
-                <li>• Clothes, Curtains, Drapes</li>
-                <li>• Bedding</li>
-                <li>• Scheduled Pickups</li>
-            </ul>
-        </div>
-    </div>
-
-    <!-- EXTRA SERVICES -->
+        <!-- EXTRA SERVICES -->
     <div class="extra-services">
         <div class="extra-services-content">
             <h3>WASH • DRY • FOLD</h3>
