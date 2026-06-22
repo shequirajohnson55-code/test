@@ -4,7 +4,320 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Doc's Laundry</title>
-<link rel="stylesheet" href="styles.css">
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: #f5f7fb;
+    color: #1f1f3c;
+}
+
+/* TOP BAR */
+.top-bar {
+    background: #2d3e9f;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    font-weight: bold;
+}
+
+/* HEADER */
+header {
+    background: linear-gradient(135deg, #2d3e9f, #1f2c73);
+    padding: 20px;
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+}
+
+.logo {
+    max-width: 250px;
+}
+
+/* SERVICES LEFT OF LOGO */
+.header-services {
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    text-align: right;
+}
+
+
+.header-services p {
+    margin: 5px 0;
+}
+
+/* NAV */
+nav {
+    background: #1f2c73;
+    padding: 12px;
+    text-align: center;
+    position: sticky;
+    top: 0;
+}
+
+nav a {
+    color: white;
+    margin: 0 18px;
+    text-decoration: none;
+}
+
+/* BANNER */
+.banner {
+    overflow: hidden;
+    white-space: nowrap;
+    background: #1f2c73;
+    color: #ffd700;
+    padding: 12px 0;
+    font-weight: bold;
+}
+
+.banner-track {
+    display: inline-block;
+    padding-left: 100%;
+    animation: scrollBanner 18s linear infinite;
+}
+
+@keyframes scrollBanner {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-100%); }
+}
+
+.hanger {
+    margin: 0 15px;
+}
+
+/* SECTIONS */
+section {
+    padding: 60px 20px;
+    max-width: 1100px;
+    margin: auto;
+    width: 100%;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 25px;
+    color: #2d3e9f;
+}
+
+/* CARD */
+.card {
+    position: relative;
+    padding: 25px;
+    border-radius: 12px;
+    overflow: hidden;
+    margin: 20px 0;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+}
+
+.card-light {
+    background: white;
+}
+
+.card-bg {
+    background-size: cover;
+    background-position: center;
+    color: white;
+}
+
+.card-bg::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.55);
+}
+
+.card-content {
+    position: relative;
+}
+
+/* LIST */
+ul {
+    list-style: none;
+}
+
+ul li {
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.3);
+}
+
+/* LOCATIONS */
+.locations {
+    display: grid;
+    gap: 20px;
+}
+
+.location-link {
+    text-decoration: none;
+    color: inherit;
+}
+
+.location-link:hover .card {
+    transform: scale(1.02);
+}
+
+/* BUTTON */
+.call-btn {
+    display: inline-block;
+    background: #2d3e9f;
+    color: white;
+    padding: 12px 20px;
+    margin-top: 15px;
+    border-radius: 8px;
+    text-decoration: none;
+}
+
+/* SCROLL ANIMATION */
+.fade {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s ease;
+}
+
+.fade.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* MAP */
+iframe {
+    width: 100%;
+    height: 350px;
+    border-radius: 12px;
+}
+
+/* FOOTER */
+footer {
+    background: #1f2c73;
+    color: white;
+    text-align: center;
+    padding: 25px;
+}
+
+/* FIX FOR PHONE NUMBER COLOR ON MOBILE */
+.top-bar a {
+    color: white !important;
+    text-decoration: none;
+}
+
+/* MOBILE RESPONSIVENESS FIX */
+body {
+    width: 100%;
+    overflow-x: hidden;
+}
+
+html {
+    width: 100%;
+    overflow-x: hidden;
+}
+
+/* HERO SECTION STYLES */
+.hero-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 0.9fr;
+    align-items: center;
+    gap: 2rem;
+}
+
+.hero-copy h2 {
+    font-size: clamp(2.75rem, 5vw, 3.8rem);
+    color: #1f2c73;
+    margin-bottom: 1.2rem;
+    line-height: 1.03;
+}
+
+.hero-copy p {
+    color: #5e678c;
+    font-size: 1.05rem;
+    max-width: 680px;
+    line-height: 1.6;
+}
+
+.hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 1.7rem;
+}
+
+.btn-primary,
+.btn-secondary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 999px;
+    padding: 1rem 1.6rem;
+    text-decoration: none;
+    font-weight: 700;
+    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn-primary {
+    background: #2d3e9f;
+    color: white;
+    box-shadow: 0 18px 34px rgba(45, 62, 159, 0.18);
+}
+
+.btn-primary:hover {
+    transform: translateY(-1px);
+}
+
+.btn-secondary {
+    background: white;
+    color: #1f2c73;
+    box-shadow: 0 12px 28px rgba(45, 62, 159, 0.12);
+}
+
+.btn-secondary:hover {
+    transform: translateY(-1px);
+}
+
+.hero-visual {
+    position: relative;
+    min-height: 320px;
+    border-radius: 24px;
+    overflow: hidden;
+    background-image: url('laundry.jpeg');
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0 24px 60px rgba(24, 54, 118, 0.18);
+}
+
+.hero-visual::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(25, 43, 103, 0.22), rgba(15, 30, 74, 0.72));
+}
+
+.hero-visual p {
+    position: absolute;
+    left: 1.25rem;
+    right: 1.25rem;
+    bottom: 1.25rem;
+    color: white;
+    z-index: 1;
+    font-size: 1rem;
+    line-height: 1.8;
+}
+
+@media (max-width: 900px) {
+    .hero-grid {
+        grid-template-columns: 1fr;
+    }
+}
+</style>
 </head>
 
 <body>
@@ -13,33 +326,29 @@
 📍 Baton Rouge, LA | 📞 (225) 383-6798 | 🕒 7:00 AM – 10:00 PM (Premium Services 8AM–3PM)
 </div>
 
-<header class="site-header">
-    <div class="header-inner">
-        <div class="branding">
-            <img src="IMG_0883.jpeg" alt="Doc's Laundry Logo">
-            <div>
-                <h1>Doc's Laundry</h1>
-                <p>Wash • Dry • Fold • Press • Steam</p>
-            </div>
+<header>
+    <div class="header-container">
+        
+        <div class="header-services">
+            <p>WASH</p>
+            <p>DRY</p>
+            <p>FOLD</p>
+            <p>PRESS</p>
+            <p>STEAM</p>
+            
         </div>
 
-        <div class="service-labels">
-            <span>WASH</span>
-            <span>DRY</span>
-            <span>FOLD</span>
-            <span>PRESS</span>
-            <span>STEAM</span>
-        </div>
+        <img src="IMG_0883.jpeg" class="logo">
+
     </div>
 </header>
 
-<nav class="site-nav">
-    <nav>
-        <a href="services.html">Services</a>
-        <a href="#about">About Us</a>
-        <a href="#locations">Locations</a>
-        <a href="#contact">Contact</a>
-    </nav>
+<nav>
+    
+    <a href="services.html">Services</a>
+    <a href="#about">About Us</a>
+    <a href="#locations">Locations</a>
+    <a href="#contact">Contact</a>
 </nav>
 
 <div class="banner">
@@ -49,138 +358,261 @@
         FOLD <span class="hanger">👕</span>
         PRESS <span class="hanger">👕</span>
         STEAM <span class="hanger">👕</span>
-        ALTERATIONS <span class="hanger">👕</span>
+	ALTERATIONS <span class="hanger">👕</span>
+
+        
     </div>
 </div>
 
-<main>
-<section class="section">
+<section class="fade" style="padding: 60px 20px; max-width: 1100px; margin: auto; width: 100%;">
     <div class="hero-grid">
         <div class="hero-copy">
             <h2>Elevate your laundry experience in Baton Rouge.</h2>
-            <p>Doc's Laundry combines traditional professional wash, dry, fold, steaming, and linen services for homes, hospitality, and local businesses.</p>
+            <p>Doc's Laundry combines traditioprofessional wash, dry, fold, steaming, and more services with linen care for homes, hospitality, and local businesses.</p>
             <div class="hero-actions">
                 <a class="btn-primary" href="tel:12253836798">📞 Call Now</a>
                 <a class="btn-secondary" href="#services">See Services</a>
             </div>
         </div>
         <div class="hero-visual">
-            <p>Drop off, Wash, Dry, Fold. Fast pickup and premium services available every day.</p>
+            <p>Drop off, Wash, Dry, Fold Fast pickup, Premium services. The process is simple you drop off your clothes, the staff weighs them and washes, dries, and neatly folds or hangs them fo[...]</p>
         </div>
     </div>
 </section>
 
-<section id="about" class="section">
-    <h2 class="section-title">About Us</h2>
-    <div class="service-card">
+<section id="about" class="fade">
+    <h2>About Us</h2>
+    <div class="card card-light">
         <p>
-            Doc’s Laundry is a trusted laundromat in Baton Rouge providing laundry and linen services.
-            We offer wash, dry and fold, steam, and press services for personal and commercial needs. Visit our Government Street location for premium services (8 AM - 3 PM daily).
+            Doc’s Laundry is a trusted laundromat in Baton Rouge providing Laundry and linen services.
+            We offer wash dry and fold, steam, and press services for personal to commercial needs. Visit us at Doc's on government street for our premium services (8 am- 3 pm daily)
+	
         </p>
     </div>
 </section>
+<section id="services" class="fade">
+    <h2 style="font-size:42px;">
+        When It  Comes to Laundry
+    </h2>
 
-<section id="services" class="section">
-    <h2 class="section-title">When It Comes to Laundry</h2>
+    <div style="
+        display:grid;
+        grid-template-columns:repeat(auto-fit,minmax(450px,1fr));
+        gap:25px;
+        margin-top:35px;
+    ">
 
-    <div class="grid-2">
-        <div class="service-card">
-            <h3>👕 Premium Wash & Fold</h3>
-            <ul>
-                <li>Drop-Off Same Day Service</li>
-                <li>Wash • Dry • Fold</li>
-                <li>Large Bundle Washes Welcomed</li>
-                <li>Press/Iron/Steam Garments</li>
-                <li>Check, Card, Cash, Tap-to-Pay</li>
+        <!-- WASH & FOLD -->
+
+        <div class="card card-light" style="
+            border:3px solid #1f2c73;
+            border-radius:18px;
+        ">
+            <h3 style="
+                color:#1f2c73;
+                font-size:32px;
+                margin-bottom:15px;
+            ">
+               <center>👕Let us do it for you!  <br>
+<center> 8 A.M. - 3 P.M. <br> Everyday 
+            </h3>
+            <ul style="
+                list-style:none;
+                color:#333;
+                font-size:18px;
+                line-height:1.8;
+            "> 	
+<li>•Drop-Off Same Day Service </li>
+<li>•Wash • Dry • Fold</li>
+<li>•Large Bundle Washes Welcomed<br> No load too big or too small</li>           
+               
+                <li>•Press/Iron/Steam Garments with No upcharge for startch</li><li>•Check, Card, Cash, Tap-to-Pay (for all premium services)</li>
+           </ul>
+        </div>
+
+        <!-- Self-Service -->
+
+        <div class="card card-light" style="
+            border:3px solid #1f2c73;
+            border-radius:18px;
+        ">
+            <h3 style="
+                color:#1f2c73;
+                font-size:32px;
+                margin-bottom:15px;
+            ">
+                 <center> 👔Do It Yourself!
+             </h3>
+
+            <ul style="
+                list-style:none;
+                color:#333;
+                font-size:18px;
+                line-height:1.8;
+            ">                <li>• Large & Small Commercial Washers</li>
+                <li>•A/C, T.V, Wifi </li>
+                <li>• Soap Machine supplying:<br> Detergents, Fabric Softeners, Bleach & Dryer Sheets</li>
+                <li>• Cash, Card & Tap (for self service)</li>
+                <li>• Free Bags during Premium Services hours.</li>
+
+
             </ul>
         </div>
 
-        <div class="service-card">
-            <h3>👔 Self-Service Wash and Dry</h3>
-            <ul>
-                <li>Large & Small Commercial Washers</li>
-                <li>A/C, T.V, Wifi</li>
-                <li>Soap Machine: Detergents, Fabric Softeners, Bleach & Dryer Sheets</li>
-                <li>Cash, Card & Tap</li>
-                <li>Free Bags during Premium Services hours</li>
-            </ul>
+    </div>
+
+    <!--Press Steam -->
+
+    <div class="card card-light" style="
+        margin-top:30px;
+        border:3px solid #1f2c73;
+        border-radius:18px;
+    ">
+
+        <h3 style="
+            color:#1f2c73;
+            font-size:34px;
+            margin-bottom:20px;
+        ">
+            <center>🛏️ We Offer Services Others Don't!
+        </h3>
+    	<div style="
+            display:grid;
+            grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+            gap:20px;
+        ">
+
+            <ul style="
+                list-style:none;
+                color:#333;
+                font-size:18px;
+                line-height:1.8;
+            ">
+<li>•Pressing/Ironing Sheets, Pillowcases, Duvets and napkins</li>
+                <li>•Pressing/Ironing Tablecloths and linenes</li>
+                <li>•Steamig Curtains/Drapes</li>
+
+		<li>•Pickup + Delivery on Large Repeat Orders</li>
+                <li>•Stain Removal</li>
+                <li>•Comforters, Blankets, Quilts, Rugs, Mats, Simple Alterations, & Shoes</li>
+                </ul>
+
+            <ul style="
+                list-style:none;
+                color:#333;
+                font-size:18px;
+                line-height:1.8;
+            ">
+                            </ul>
+
         </div>
     </div>
 
-    <div class="service-card" style="margin-top:1.5rem;">
-        <h3>🛏️ Press • Steam • Alterations</h3>
-        <div class="grid-2">
-            <ul>
-                <li>Pressing/Ironing Sheets, Pillowcases, Duvets and Napkins</li>
-                <li>Pressing/Ironing Tablecloths and Linens</li>
-                <li>Steaming Curtains/Drapes</li>
-                <li>Pickup & Delivery on Large Repeat Orders</li>
-            </ul>
-            <ul>
-                <li>Stain Removal</li>
-                <li>Comforters, Blankets, Quilts, Rugs, Mats</li>
-                <li>Simple Alterations & Shoes</li>
-            </ul>
-        </div>
-    </div>
 
+    
+
+    <!-- EXTRA SERVICES -->
+
+    <div class="card card-bg"
+         style="
+         background-image:url('laundry.jpeg');
+         margin-top:30px;
+         border-radius:18px;
+         min-height:250px;
+         display:flex;
+         align-items:center;
+         justify-content:center;
+         ">
+
+        <div class="card-content" style="
+            text-align:center;
+            max-width:800px;
+        ">
+            <h3 style="
+                font-size:42px;
+                margin-bottom:15px;
+            ">
+                WASH • DRY • FOLD
+            </h3>
+
+            <h3 style="
+                font-size:42px;
+                margin-bottom:15px;
+            ">
+                PRESS • STEAM • ALTERATIONS
+            </h3>
+
+            <p style="
+                font-size:24px;
+                margin-top:20px;
+            ">
+                Uncompromising Quality. Affordable Pricing. Guaranteed.
+            </p>
+        </div>
 </section>
 
-<section id="locations" class="section">
-    <h2 class="section-title">Our Locations</h2>
+
+<section id="locations" class="fade">
+    <h2>Our Locations</h2>
     <div class="locations">
 
-        <div class="location-card">
-            <h3>Government Street</h3>
-            <p>2485 Government St, Baton Rouge, LA</p>
-            <div class="iframe-wrapper" style="margin-top:1rem;">
-                <iframe src="https://www.google.com/maps?q=2485+Government+St,+Baton+Rouge,+LA&output=embed" allowfullscreen></iframe>
+        <a href="https://www.google.com/maps?q=2485+Government+St+Baton+Rouge" target="_blank" class="location-link">
+            <div class="card card-light">
+                <h3>Government Street</h3>
+                <p>2485 Government St</p>
             </div>
-            <p style="margin-top:0.6rem;"><a href="https://www.google.com/maps?q=2485+Government+St+Baton+Rouge" target="_blank">Open in Google Maps</a></p>
-        </div>
+        </a>
 
-        <div class="location-card">
-            <h3>Nicholson Drive</h3>
-            <p>2922 Nicholson Dr, Baton Rouge, LA</p>
-            <div class="iframe-wrapper" style="margin-top:1rem;">
-                <iframe src="https://www.google.com/maps?q=2922+Nicholson+Dr,+Baton+Rouge,+LA&output=embed" allowfullscreen></iframe>
+        <a href="https://www.google.com/maps?q=2922+Nicholson+Dr+Baton+Rouge" target="_blank" class="location-link">
+            <div class="card card-light">
+                <h3>Nicholson Drive</h3>
+                <p>2922 Nicholson Dr</p>
             </div>
-            <p style="margin-top:0.6rem;"><a href="https://www.google.com/maps?q=2922+Nicholson+Dr+Baton+Rouge" target="_blank">Open in Google Maps</a></p>
-        </div>
+        </a>
 
-        <div class="location-card">
-            <h3>Plank Road</h3>
-            <p>5023 Plank Rd, Baton Rouge, LA</p>
-            <div class="iframe-wrapper" style="margin-top:1rem;">
-                <iframe src="https://www.google.com/maps?q=5023+Plank+Rd,+Baton+Rouge,+LA&output=embed" allowfullscreen></iframe>
+        <a href="https://www.google.com/maps?q=5023+Plank+Rd+Baton+Rouge" target="_blank" class="location-link">
+            <div class="card card-light">
+                <h3>Plank Road</h3>
+                <p>5023 Plank Rd</p>
             </div>
-            <p style="margin-top:0.6rem;"><a href="https://www.google.com/maps?q=5023+Plank+Rd+Baton+Rouge" target="_blank">Open in Google Maps</a></p>
-        </div>
+        </a>
 
     </div>
 </section>
 
-<section id="contact" class="section">
-    <h2 class="section-title">Contact Us</h2>
-    <div class="contact-card">
-        <p><strong>Phone:</strong> (225) 383-6798</p>
-        <p><strong>Email:</strong> docsinc@bellsouth.net</p>
-        <a href="tel:12253836798" class="call-btn">📞 Call Now</a>
+<section id="contact" class="fade">
+    <h2>Contact Us</h2>
+    <div class="card card-bg" style="background-image:url('cards.jpeg')">
+        <div class="card-content">
+            <p><strong>Phone:</strong> (225) 383-6798</p>
+            <p><strong>Email:</strong> docsinc@bellsouth.net</p>
+
+            <a href="tel:12253836798" class="call-btn">📞 Call Now</a>
+        </div>
     </div>
 </section>
 
-<section class="section">
-    <h2 class="section-title">Find Us</h2>
-    <div class="iframe-wrapper">
-        <iframe src="https://www.google.com/maps?q=2485+Government+St,+Baton+Rouge,+LA&output=embed" allowfullscreen></iframe>
-    </div>
+<section class="fade">
+    <h2>Find Us</h2>
+    <iframe src="https://www.google.com/maps?q=2485+Government+St,+Baton+Rouge,+LA&output=embed"></iframe>
 </section>
-
-</main>
 
 <footer>
     <p>© 2026 Doc's Laundry</p>
 </footer>
+
+<script>
+const faders = document.querySelectorAll('.fade');
+
+window.addEventListener('scroll', () => {
+    faders.forEach(el => {
+        const top = el.getBoundingClientRect().top;
+        if (top < window.innerHeight - 100) {
+            el.classList.add('show');
+        }
+    });
+});
+</script>
 
 </body>
 </html>
