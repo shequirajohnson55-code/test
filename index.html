@@ -131,6 +131,29 @@ h2 {
     color: white;
 }
 
+.service-image-card {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    min-height: 340px;
+    background-color: white;
+    position: relative;
+}
+
+.service-image-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(255, 255, 255, 0.75);
+    pointer-events: none;
+    border-radius: 18px;
+}
+
+.service-image-card .card-content {
+    position: relative;
+    z-index: 1;
+}
+
 .card-bg::before {
     content: "";
     position: absolute;
@@ -371,14 +394,14 @@ html {
     <div class="hero-grid">
         <div class="hero-copy">
             <h2>Elevate your laundry experience in Baton Rouge.</h2>
-            <p>Doc's Laundry combines traditioprofessional wash, dry, fold, steaming, and more services with linen care for homes, hospitality, and local businesses.</p>
+            <p>Doc's Laundry combines traditional professional wash, dry, fold, steaming, and more services with linen care for homes, hospitality, and local businesses.</p>
             <div class="hero-actions">
                 <a class="btn-primary" href="tel:12253836798">📞 Call Now</a>
                 <a class="btn-secondary" href="#services">See Services</a>
             </div>
         </div>
         <div class="hero-visual">
-            <p>Drop off, Wash, Dry, Fold Fast pickup, Premium services. The process is simple you drop off your clothes, the staff weighs them and washes, dries, and neatly folds or hangs them fo[...]</p>
+            <p>Drop off, Wash, Dry, Fold Fast pickup, Premium services. The process is simple you drop off your clothes, the staff weighs them, washes, dries, and neatly folds or hangs thems.</p>
         </div>
     </div>
 </section>
@@ -395,7 +418,7 @@ html {
 </section>
 <section id="services" class="fade">
     <h2 style="font-size:42px;">
-        When It  Comes to Laundry
+        When It  Comes to Laundry...
     </h2>
 
     <div style="
@@ -407,78 +430,87 @@ html {
 
         <!-- WASH & FOLD -->
 
-        <div class="card card-light" style="
+        <div class="card service-image-card" style="
             border:3px solid #1f2c73;
             border-radius:18px;
+            background-image:url('folded.jpeg');
         ">
-            <h3 style="
-                color:#1f2c73;
-                font-size:32px;
-                margin-bottom:15px;
-            ">
-               <center>👕Let us do it for you!  <br>
+            <div class="card-content">
+                <h3 style="
+                    color:#1f2c73;
+                    font-size:32px;
+                    margin-bottom:15px;
+                ">
+                   <center>👕Let us do it for you!  <br>
 <center> 8 A.M. - 3 P.M. <br> Everyday 
-            </h3>
-            <ul style="
-                list-style:none;
-                color:#333;
-                font-size:18px;
-                line-height:1.8;
-            "> 	
+                </h3>
+                <ul style="
+                    list-style:none;
+                    color:#333;
+                    font-size:20px;
+                    font-weight: bold;
+                    line-height:1.8;
+                "> 	
 <li>•Drop-Off Same Day Service </li>
 <li>•Wash • Dry • Fold</li>
-<li>•Large Bundle Washes Welcomed<br> No load too big or too small</li>           
+<li>•Large Bundle Washes Welcomed<br> No load too big or no load too small</li>           
                
-                <li>•Press/Iron/Steam Garments with No upcharge for startch</li><li>•Check, Card, Cash, Tap-to-Pay (for all premium services)</li>
-           </ul>
+                <li>•Press/Iron/Steam Garments with No upcharge for starch</li><li>•Card, Cash, Check, Tap-to-Pay (for all premium services)</li>
+               </ul>
+            </div>
         </div>
 
         <!-- Self-Service -->
 
-        <div class="card card-light" style="
+        <div class="card service-image-card" style="
             border:3px solid #1f2c73;
             border-radius:18px;
+            background-image:url('iron .jpeg');
         ">
-            <h3 style="
-                color:#1f2c73;
-                font-size:32px;
-                margin-bottom:15px;
-            ">
-                 <center> 👔Do It Yourself!
-             </h3>
+            <div class="card-content">
+                <h3 style="
+                    color:#1f2c73;
+                    font-size:32px;
+                    margin-bottom:15px;
+                ">
+                     <center> 👔Do It Yourself!
+                 </h3>
 
-            <ul style="
-                list-style:none;
-                color:#333;
-                font-size:18px;
-                line-height:1.8;
-            ">                <li>• Large & Small Commercial Washers</li>
-                <li>•A/C, T.V, Wifi </li>
-                <li>• Soap Machine supplying:<br> Detergents, Fabric Softeners, Bleach & Dryer Sheets</li>
-                <li>• Cash, Card & Tap (for self service)</li>
-                <li>• Free Bags during Premium Services hours.</li>
+                <ul style="
+                    list-style:none;
+                    color:#333;
+                    font-weight: bold;
+                    font-size:22px;
+                    line-height:1.8;
+                ">                <li>• Large & Small Commercial Washers</li>
+                    <li>•A/C, T.V, Free Wifi </li>
+                    <li>• Soap Machine supplying:<br> Detergents, Fabric Softeners, Bleach & Dryer Sheets</li>
+                    <li>• Cash, Card & Tap (for self service)</li>
+                    <li>• Free Bags during Premium Services hours.</li>
 
 
-            </ul>
+                </ul>
+            </div>
         </div>
 
     </div>
 
     <!--Press Steam -->
 
-    <div class="card card-light" style="
+    <div class="card service-image-card" style="
         margin-top:30px;
         border:3px solid #1f2c73;
         border-radius:18px;
+        background-image:url('towells.jpeg');
     ">
-
-        <h3 style="
-            color:#1f2c73;
-            font-size:34px;
-            margin-bottom:20px;
-        ">
-            <center>🛏️ We Offer Services Others Don't!
-        </h3>
+        <div class="card-content">
+            <h3 style="
+                color:#1f2c73;
+                font-size:34px;
+                margin-bottom:20px;
+            ">
+                <center>🛏️ We Offer Services Others Don't!
+            </h3>
 	    <div style="
             display:grid;
             grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
@@ -489,13 +521,14 @@ html {
                 list-style:none;
                 color:#333;
                 font-size:18px;
+		font-weight: bold;
                 line-height:1.8;
             ">
-<li>•Pressing/Ironing Sheets, Pillowcases, Duvets and napkins</li>
-                <li>•Pressing/Ironing Tablecloths and linenes</li>
-                <li>•Steamig Curtains/Drapes</li>
+<li>•Pressing/Ironing Sheets, Pillowcases, Duvets and Napkins</li>
+                <li>•Pressing/Ironing Tablecloths and Linens</li>
+                <li>•Steaming Curtains/Drapes</li>
 
-		<li>•Pickup + Delivery on Large Repeat Orders</li>
+		<li>•Pickup & Delivery on Large Repeat Orders</li>
                 <li>•Stain Removal</li>
                 <li>•Comforters, Blankets, Quilts, Rugs, Mats, Simple Alterations, & Shoes</li>
                 </ul>
@@ -504,15 +537,14 @@ html {
                 list-style:none;
                 color:#333;
                 font-size:18px;
+		font-weight: bold;
                 line-height:1.8;
             ">
                             </ul>
 
         </div>
+        </div>
     </div>
-
-
-    
 
     <!-- EXTRA SERVICES -->
 
@@ -552,6 +584,7 @@ html {
                 Uncompromising Quality. Affordable Pricing. Guaranteed.
             </p>
         </div>
+    </div>
 </section>
 
 
